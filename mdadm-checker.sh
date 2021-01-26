@@ -2,8 +2,7 @@
 
 source lib/main.sh
 
-# condition=$(cat /proc/mdstat > /root/mdstat && egrep -c "\[.*_.*\]" /root/mdstat)
-condition=1
+condition=$(cat /proc/mdstat > /root/mdstat && egrep -c "\[.*_.*\]" /root/mdstat)
 
 msgSubject="RAID Checker"
 msgBody="Host: $HOSTNAME Mdadm, Status: OK"

@@ -8,7 +8,6 @@ msgSubject="RAID Checker"
 msgBody="Host: $HOSTNAME Zpool, Status: OK"
 
 [[ ! -z ${condition} ]] && {
-  msgSubject="Fault"
   msgBody=$condition
   sendMsg "$msgSubject" "$msgBody"
 } || {
